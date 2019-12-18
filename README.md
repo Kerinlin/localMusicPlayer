@@ -1,4 +1,4 @@
-# electron-vue-demo
+# electron-vue
 
 ## Project setup
 ```
@@ -7,22 +7,12 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn electron:serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
+yarn electron:build
 ```
 
 ### Customize configuration
