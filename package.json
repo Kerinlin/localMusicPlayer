@@ -1,6 +1,8 @@
 {
-  "name": "electron-vue-demo",
+  "name": "testplayer",
   "version": "0.1.0",
+  "author": "kerinlin",
+  "description": "Local wave music player",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -14,9 +16,12 @@
   "main": "background.js",
   "dependencies": {
     "core-js": "^3.4.3",
+    "normalize.css": "^8.0.1",
+    "stream-to-blob": "^2.0.1",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
-    "vuex": "^3.1.2"
+    "vuex": "^3.1.2",
+    "wavesurfer.js": "^4.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
