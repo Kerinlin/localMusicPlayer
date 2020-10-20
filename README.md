@@ -1,4 +1,7 @@
-# electron-vue
+# Local music player
+## Usage
+
+Chose orangePlayer to play your music,support **.mp3 .wav .flac .ogg .m4a** .file
 
 ## Project setup
 ```
