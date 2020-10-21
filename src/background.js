@@ -1,11 +1,12 @@
 "use strict";
 const electron = require("electron");
-import { app, protocol, BrowserWindow } from "electron";
+import { app, protocol, BrowserWindow, dialog } from "electron";
 const { ipcMain } = require("electron");
 import {
   createProtocol
   // installVueDevtools
 } from "vue-cli-plugin-electron-builder/lib";
+import { autoUpdater } from "electron-updater";
 const isDevelopment = process.env.NODE_ENV !== "production";
 const globalShortcut = electron.globalShortcut;
 // Keep a global reference of the window object, if you don't, the window will
@@ -39,6 +40,7 @@ function createWindow() {
     createProtocol("app");
     // Load the index.html when not in development
     win.loadURL("app://./index.html");
+    autoUpdater.checkForUpdates();
   }
 
   win.on("closed", () => {
@@ -94,7 +96,18 @@ ipcMain.on("close", () => {
 ipcMain.on("minimize", () => {
   win.minimize();
 });
-
+autoUpdater.on("checking-for-update", () => {});
+autoUpdater.on("update-available", info => {
+  console.log(info);
+  dialog.showMessageBox("有新版本，稍后将为您自动更新");
+});
+// autoUpdater.on("update-not-available", (info) => {});
+// autoUpdater.on("error", (err) => {});
+// autoUpdater.on("download-progress", (progressObj) => {});
+autoUpdater.on("update-downloaded", info => {
+  console.log(info);
+  autoUpdater.quitAndInstall();
+});
 // Exit cleanly on request from parent process in development mode.
 if (isDevelopment) {
   if (process.platform === "win32") {

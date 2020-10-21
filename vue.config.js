@@ -5,6 +5,7 @@ module.exports = {
       builderOptions: {
         appId: "com.electron.zzplayer",
         productName: "OrangePlayer",
+        publish: ["github"],
         fileAssociations: [
           {
             ext: ["mp3", "wav", "flac", "ogg", "m4a"],

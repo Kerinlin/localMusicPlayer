@@ -16,6 +16,7 @@
   "main": "background.js",
   "dependencies": {
     "core-js": "^3.4.3",
+    "electron-updater": "^4.3.5",
     "normalize.css": "^8.0.1",
     "stream-to-blob": "^2.0.1",
     "vue": "^2.6.10",
