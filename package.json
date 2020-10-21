@@ -1,6 +1,6 @@
 {
-  "name": "testplayer",
-  "version": "0.1.0",
+  "name": "orange-player",
+  "version": "0.2.6",
   "author": "kerinlin",
   "description": "Local wave music player",
   "private": true,

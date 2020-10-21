@@ -99,7 +99,13 @@ ipcMain.on("minimize", () => {
 autoUpdater.on("checking-for-update", () => {});
 autoUpdater.on("update-available", info => {
   console.log(info);
-  dialog.showMessageBox("有新版本，稍后将为您自动更新");
+  dialog.showMessageBox({
+    title: "新版本发布",
+    message: "有新内容更新，稍后将重新为您安装",
+    buttons: ["确定"],
+    type: "info",
+    noLink: true
+  });
 });
 // autoUpdater.on("update-not-available", (info) => {});
 // autoUpdater.on("error", (err) => {});
