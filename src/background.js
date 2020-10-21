@@ -91,6 +91,9 @@ if (gotTheLock) {
 ipcMain.on("close", () => {
   win.close();
 });
+ipcMain.on("minimize", () => {
+  win.minimize();
+});
 
 // Exit cleanly on request from parent process in development mode.
 if (isDevelopment) {

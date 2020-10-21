@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <header class="header-container">
+      <i @click="minimize" class="fa fa-minus" aria-hidden="true"></i>
       <i @click="close" class="fa fa-times" aria-hidden="true"></i>
     </header>
     <router-view />
@@ -13,6 +14,9 @@ export default {
   methods: {
     close() {
       ipcRenderer.send("close");
+    },
+    minimize() {
+      ipcRenderer.send("minimize");
     }
   }
 };
