@@ -1,4 +1,7 @@
 # Local music player
+
+![BCM9HI.png](https://s1.ax1x.com/2020/10/21/BCM9HI.png)
+
 ## Usage
 
 Chose orangePlayer to play your music,support **.mp3 .wav .flac .ogg .m4a** .file
