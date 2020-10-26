@@ -88,10 +88,13 @@ if (gotTheLock) {
     });
     createWindow();
   });
+} else {
+  app.quit();
 }
 
 ipcMain.on("close", () => {
   win.close();
+  app.quit();
 });
 ipcMain.on("minimize", () => {
   win.minimize();

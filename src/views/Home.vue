@@ -94,8 +94,7 @@ export default {
 
       // 首次加载
       let originPath = remote.process.argv[1];
-      // let originPath =
-      //   "E:\\CloudMusic\\林加弦- - 收敛（吉他 治愈版）（翻自 不够）.mp3";
+      // let originPath = 'E:\\CloudMusic\\林加弦- - 收敛（吉他 治愈版）（翻自 不够）.mp3';
       this.loadMusic(originPath);
 
       // 播放其他歌曲，监听主进程senond-instance传过来的第二首歌曲的本地路径
