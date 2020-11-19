@@ -9,7 +9,7 @@
 </template>
 
 <script>
-const { ipcRenderer } = require("electron");
+const ipcRenderer = require("electron").ipcRenderer;
 export default {
   methods: {
     close() {
