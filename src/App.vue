@@ -9,7 +9,8 @@
 </template>
 
 <script>
-const ipcRenderer = require("electron").ipcRenderer;
+// const ipcRenderer = require("electron").ipcRenderer;
+const { ipcRenderer } = window.require("electron");
 export default {
   methods: {
     close() {

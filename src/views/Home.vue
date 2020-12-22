@@ -60,7 +60,7 @@ var path = require("path");
 var fs = require("fs");
 const { Readable } = require("stream");
 const streamToBlob = require("stream-to-blob");
-const ipcRenderer = require("electron").ipcRenderer;
+const { ipcRenderer } = window.require("electron");
 const remote = require("electron").remote;
 
 export default {
