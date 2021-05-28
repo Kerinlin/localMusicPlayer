@@ -56,12 +56,12 @@
 import WaveSurfer from "wavesurfer.js";
 // import Timeline from "wavesurfer.js/dist/plugin/wavesurfer.timeline.js";
 // import Spectrogram from "wavesurfer.js/dist/plugin/wavesurfer.spectrogram.js";
-var path = require("path");
-var fs = require("fs");
+const path = window.path;
+const fs = window.fs;
 const { Readable } = require("stream");
 const streamToBlob = require("stream-to-blob");
 const { ipcRenderer } = window.require("electron");
-const remote = require("electron").remote;
+// const remote = require("electron").remote;
 
 export default {
   name: "Details",
@@ -93,12 +93,14 @@ export default {
       });
 
       // 首次加载
-      let originPath = remote.process.argv[1];
-      // let originPath = 'E:\\CloudMusic\\林加弦- - 收敛（吉他 治愈版）（翻自 不够）.mp3';
-      this.loadMusic(originPath);
+      // let originPath = remote.process.argv[1];
+      // let originPath = '/Users/kerin/Downloads/艾辰 - 错位时空.mp3';
+      // this.loadMusic(originPath);
 
       // 播放其他歌曲，监听主进程senond-instance传过来的第二首歌曲的本地路径
+      ipcRenderer.send("getPath");
       ipcRenderer.on("path", (event, arg) => {
+        console.log({ path });
         const newOriginPath = arg;
 
         // console.log(newOriginPath);
