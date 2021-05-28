@@ -6,6 +6,11 @@
 
 Chose orangePlayer to play your music,support **.mp3 .wav .flac .ogg .m4a** .file
 
+## Introduce
+1.Support mac and windows;
+2.Update the electron version to v11;
+
+
 ## Project setup
 ```
 yarn install
