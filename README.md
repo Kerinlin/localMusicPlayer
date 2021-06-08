@@ -14,6 +14,8 @@ Get more info to check Here: [https://segmentfault.com/a/1190000037613988](https
 
 2. Update the electron version to v11;
 
+3. Autoupdate
+
 ## Project setup
 
 ```
