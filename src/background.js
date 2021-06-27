@@ -53,7 +53,7 @@ function createWindow() {
 let filePath;
 
 // windows通过process.argv获取打开文件的路径
-if (process.platform !== "darwin") {
+if (process.platform === "win32") {
   filePath = process.argv[1];
 }
 
